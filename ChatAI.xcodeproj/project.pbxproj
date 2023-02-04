@@ -7,13 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A379F334298E62AC00B97920 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A379F333298E62AC00B97920 /* SplashView.swift */; };
+		A3B014EF298D947F00CECC05 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B014EE298D947F00CECC05 /* API.swift */; };
 		A3B3B0EC298D5D1C00129060 /* ChatAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3B0EB298D5D1C00129060 /* ChatAIApp.swift */; };
 		A3B3B0EE298D5D1C00129060 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3B3B0ED298D5D1C00129060 /* ContentView.swift */; };
 		A3B3B0F0298D5D1D00129060 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3B3B0EF298D5D1D00129060 /* Assets.xcassets */; };
 		A3B3B0F3298D5D1D00129060 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3B3B0F2298D5D1D00129060 /* Preview Assets.xcassets */; };
+		A3B3B0FB298D5D9200129060 /* OpenAISwift in Frameworks */ = {isa = PBXBuildFile; productRef = A3B3B0FA298D5D9200129060 /* OpenAISwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A379F333298E62AC00B97920 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		A3B014EE298D947F00CECC05 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		A3B3B0E8298D5D1C00129060 /* ChatAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B3B0EB298D5D1C00129060 /* ChatAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatAIApp.swift; sourceTree = "<group>"; };
 		A3B3B0ED298D5D1C00129060 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -26,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3B3B0FB298D5D9200129060 /* OpenAISwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,7 +59,9 @@
 			children = (
 				A3B3B0EB298D5D1C00129060 /* ChatAIApp.swift */,
 				A3B3B0ED298D5D1C00129060 /* ContentView.swift */,
+				A3B014EE298D947F00CECC05 /* API.swift */,
 				A3B3B0EF298D5D1D00129060 /* Assets.xcassets */,
+				A379F333298E62AC00B97920 /* SplashView.swift */,
 				A3B3B0F1298D5D1D00129060 /* Preview Content */,
 			);
 			path = ChatAI;
@@ -83,6 +91,9 @@
 			dependencies = (
 			);
 			name = ChatAI;
+			packageProductDependencies = (
+				A3B3B0FA298D5D9200129060 /* OpenAISwift */,
+			);
 			productName = ChatAI;
 			productReference = A3B3B0E8298D5D1C00129060 /* ChatAI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +122,9 @@
 				Base,
 			);
 			mainGroup = A3B3B0DF298D5D1C00129060;
+			packageReferences = (
+				A3B3B0F9298D5D9200129060 /* XCRemoteSwiftPackageReference "OpenAISwift" */,
+			);
 			productRefGroup = A3B3B0E9298D5D1C00129060 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +152,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3B3B0EE298D5D1C00129060 /* ContentView.swift in Sources */,
+				A379F334298E62AC00B97920 /* SplashView.swift in Sources */,
+				A3B014EF298D947F00CECC05 /* API.swift in Sources */,
 				A3B3B0EC298D5D1C00129060 /* ChatAIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -195,7 +211,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -249,7 +265,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -275,6 +291,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,6 +321,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +357,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A3B3B0F9298D5D9200129060 /* XCRemoteSwiftPackageReference "OpenAISwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/adamrushy/OpenAISwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A3B3B0FA298D5D9200129060 /* OpenAISwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A3B3B0F9298D5D9200129060 /* XCRemoteSwiftPackageReference "OpenAISwift" */;
+			productName = OpenAISwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A3B3B0E0298D5D1C00129060 /* Project object */;
 }

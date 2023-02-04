@@ -11,7 +11,7 @@ import SwiftUI
 struct ChatAIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashView(isActive: false)
         }
     }
 }
