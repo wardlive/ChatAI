@@ -16,7 +16,7 @@ struct SplashView: View {
             if self .isActive {
                 ContentView()
             } else {
-                Image("axios")
+                Image("splashImage")
                     .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 150.0))
                     .aspectRatio(contentMode: .fill)
                     .ignoresSafeArea()

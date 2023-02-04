@@ -12,24 +12,33 @@ struct ContentView: View {
     @ObservedObject var viewModel = ViewModel()
     @State var text = ""
     @State var models = [String]()
-    
+
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
-                ForEach(models, id: \.self) { string in
-                    Text(string)
+                ScrollView {
+                    LazyVStack(alignment: .leading) {
+                        ForEach(models, id: \.self) { string in
+                            Text(string)
+                                .padding()
+                                .background(.ultraThinMaterial)
+                                .cornerRadius(20)
+                        }
+                    }
                 }
                 Spacer()
                 HStack{
-                    TextField("Ask me something", text: $text)
-                        .padding(.vertical, 20)
-                    
+                    TextField("Write a message...", text: $text)
+                        .padding(10)
+                        .background(.ultraThinMaterial)
+                        .cornerRadius(16)
+
                     Button(action: {
                         sendArrow()
                     }, label: {
-                        Image(systemName: "paperplane.circle.fill")
+                        Image(systemName: "paperplane.fill")
                             .rotationEffect(.degrees(45))
-                            .font(.system(size: 30))
+                            .font(.system(size: 36))
                     })
                 }
             }
@@ -39,13 +48,13 @@ struct ContentView: View {
                 }
             }
             .navigationBarTitle("ChatAI")
-            .padding()
+            .padding(.horizontal)
         }
     }
-    
+
     func sendArrow() {
         guard !text.trimmingCharacters(in: .whitespaces).isEmpty else { return }
-        
+
         models.append("Me: \(text)")
         viewModel.send(text: text) { response, messageType in
             DispatchQueue.main.async {

@@ -18,7 +18,7 @@ class ViewModel: ObservableObject {
     }
     
     func setup() {
-        openAI = OpenAISwift(authToken: "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")
+        openAI = OpenAISwift(authToken: "YOUR-TOKEN")
     }
   
     func send(text: String, completion: @escaping((String, MessageType) -> Void)) {
