@@ -16,10 +16,17 @@ struct SplashView: View {
             if self .isActive {
                 ContentView()
             } else {
-                Image("splashImage")
-                    .resizable(capInsets: EdgeInsets(top: 0.0, leading: 0.0, bottom: 0.0, trailing: 150.0))
-                    .aspectRatio(contentMode: .fill)
-                    .ignoresSafeArea()
+                ZStack {
+                    Rectangle()
+                        .ignoresSafeArea()
+                        .foregroundColor(/*@START_MENU_TOKEN@*/Color("AccentColor")/*@END_MENU_TOKEN@*/)
+                    
+                    Image("appstore")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 110, height: 110)
+                        .cornerRadius(20)
+                }
             }
         }
         .onAppear {
