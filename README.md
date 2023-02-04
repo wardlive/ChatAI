@@ -13,7 +13,7 @@ ChatAI is your personal chat bot powered by OpenAI's advanced language model, Ch
 - Have a conversation with a virtual friend anytime, anywhere
 ## Screenshots
 
-![App Screenshot](https://user-images.githubusercontent.com/41507524/216780252-3ad49ead-e7f1-430c-a162-f60cb143a835.png)
+![App Screenshot](https://user-images.githubusercontent.com/41507524/216790867-de1b828f-91a8-4b3d-86e0-6586d7fa3702.png)
 
 
 ## Usage/Examples
